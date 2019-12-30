@@ -1,8 +1,8 @@
 "use strict"
 var app = app || {}
 app =(()=>{
-	const WHEN_ERR = 'js파일을 찾지 못했습니다.'
-	let _, js, main_vue_js, auth_js
+	const WHEN_ERR = '앱 js파일을 찾지 못했습니다.'
+	let _, js, main_vue_js, auth_js,foreign_remit_js
 	
 	let run =x=>{
 		$.getScript( x + '/resources/js/cmm/router.js', ()=>{
@@ -17,16 +17,17 @@ app =(()=>{
 		js = $.js()
 		main_vue_js = js + '/vue/main_vue.js'
 		auth_js = js + '/cmm/auth.js'
-		
+		foreign_remit_js = js + '/foreignremit/foreignremit.js'
 	}
 	
 	let onCreate =()=>{
 		$.when(
 			$.getScript(main_vue_js),
 			$.getScript(auth_js),
+			$.getScript(foreign_remit_js)
 		)
 		.done(()=>{
-			setContentView()
+			setContentView()	
 			$('#join')
 			.click(()=>{
 				auth.onCreate('join')
@@ -37,13 +38,14 @@ app =(()=>{
 			})
 			$('#main_remit_btn')
 			.click(()=>{
-				foreignRemit.onCreate()  //경로 잡아줘야함
+				foreignRemit.onCreate()
 			})
 		})
 		.fail(()=>{
 			alert(WHEN_ERR)
 		})
 	}
+	
 	
 	let setContentView =()=>{
 		$('head')

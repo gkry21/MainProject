@@ -24,7 +24,7 @@ public class RootConfig {
 	//	hikariConfig.setDriverClassName("org.mariadb.jdbc.Driver");
 	//	hikariConfig.setJdbcUrl("jdbc:mariadb://172.168.0.199/moneyhub?serverTimezone=UTC");	//내꺼
 	//	hikariConfig.setJdbcUrl("jdbc:mariadb://172.168.0.235/moneyhubdb?serverTimezone=UTC");	//은지씨
-		hikariConfig.setDriverClassName("com.mysql.jdbc.Driver");							//myhome
+		hikariConfig.setDriverClassName("com.mysql.cj.jdbc.Driver");							//myhome
 		hikariConfig.setJdbcUrl("jdbc:mysql://localhost:3306/moneyhub?serverTimezone=UTC"); //myhome
 		hikariConfig.setUsername("moneyhub");
 		hikariConfig.setPassword("moneyhub");	

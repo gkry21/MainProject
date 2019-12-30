@@ -11,6 +11,8 @@
 	<script src="<%=application.getContextPath()%>/resources/js/vue/main_vue.js"></script>
 	<script src="<%=application.getContextPath()%>/resources/js/vue/auth_vue.js"></script>
 	<script src="<%=application.getContextPath()%>/resources/js/cmm/cookie.js"></script>
+	<script src="<%=application.getContextPath()%>/resources/js/foreignremit/foreignremit.js"></script>
+	<script src="<%=application.getContextPath()%>/resources/js/vue/remit/remit_vue.js"></script>
 	
 </head>
 <body>
